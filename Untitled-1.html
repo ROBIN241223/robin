@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gửi ảnh người mất tích</title>
+    <link rel="stylesheet" href="dropzone.min.css">
+    <script src="dropzone.min.js"></script>
+</head>
+<body>
+    <h1>Gửi ảnh người mất tích</h1>
+
+    <form action="upload.php" class="dropzone" id="my-dropzone">
+        <div class="fallback">
+            <input name="file" type="file" multiple />
+        </div>
+    </form>
+
+    <script>
+     Dropzone.options.myDropzone = {
+         paramName: "file", // Tên của input file
+         maxFilesize: 5, // MB
+         acceptedFiles: "image/*",
+          init: function() {
+             this.on("success", function(file, response) {
+             // Xử lý khi upload thành công (ví dụ: hiển thị thông báo, chuyển hướng)
+             console.log(response);  // In ra response từ server
+             alert("Ảnh đã được gửi thành công!");
+             // window.location.href = "success.html"; // Chuyển hướng (tùy chọn)
+            });
+
+           this.on("error", function(file, errorMessage) {
+               // Xử lý khi có lỗi
+               alert("Lỗi: " + errorMessage);
+           });
+          }
+     };
+
+    </script>
+</body>
+</html>
