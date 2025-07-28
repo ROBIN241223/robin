@@ -69,6 +69,10 @@ Khi bạn bật công tắc “Return to Home”, tay cầm gửi tín hiệu ch
 Dành cho các hệ thống điều khiển tầm xa (long range) như Crossfire, ELRS, R9M...
 900 MHz thường dùng ở Mỹ; 868 MHz dùng ở châu Âu (theo quy định vùng).
 Khoảng cách truyền: Có thể lên tới hàng chục km, xuyên vật cản tốt hơn 2.4 GHz.
+
 - dải tần để truyền video live về
 + Truyền bằng tín hiệu radio (2.4 GHz)
+hạn chế của dải tần này là có độ trễ tín hiệu truyền sóng kém 
+cho video chất lượng thấp tụt fps
+
 
