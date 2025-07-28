@@ -1,0 +1,13 @@
+Tìm hiểu về PX4
+Ground Control Station là gì ? (tay cầm)
+- Đọc cả SIYI MK32
+Trên drone thường sẽ có những bộ phận nào
+Giao thức thường được sử dụng là gì? (MAVlink)
+Để điều khiển drone cần những thông tin về dữ kiện gì ?
+Drone có những kiểu điều khiển như thế nào  (throttle, yaw, pitch, ..)
+Tìm hiểu xem Drone thường sử dụng những dải tần nào để điều khiển ?
+Lợi ích, tác hại của những dải tần?
+
+tài liệu tham khảo
+https://px4.io/software/software-overview/
+nó được cộng đồng phát triển trên nền tảng chip STM32H7
