@@ -11,3 +11,55 @@ Lợi ích, tác hại của những dải tần?
 tài liệu tham khảo
 https://px4.io/software/software-overview/
 nó được cộng đồng phát triển trên nền tảng chip STM32H7
+
+- các bộ phận trên drone
++----------------------------------------------------+
+|                Khung (Frame)                       |
+|  |-- Động cơ + Cánh quạt --|                       |
+|  |-- ESC (điều khiển động cơ)                      |
+|  |-- Pin (Battery)                                  |
+|  |-- Flight Controller (PX4, Pixhawk...)           |
+|      |-- IMU (Gyro + Accel)                        |
+|      |-- Compass                                   |
+|      |-- Barometer                                 |
+|  |-- GPS Module                                    |
+|  |-- Telemetry Module + Anten                      |
+|  |-- Camera + Gimbal (nếu có)                      |
+|  |-- RC Receiver                                   |
+|  |-- LED, Buzzer                                   |
+|  |-- Cảm biến bổ sung (Lidar, Sonar, Optical Flow)
+
+- trên drone thường có những bộ phận :
++
+1. Joystick / Stick (Cần điều khiển)
+2. Công tắc / Switch
+3. Núm xoay / Potentiometer
+4. Màn hình hiển thị
+5. Ăng-ten (Antenna)
+6. Cổng kết nối (USB, Trainer port, module mở rộng...)
+7. Pin / Battery
+8. Buzzer / Loa
+9. Đèn LED trạng thái
+
+
+- quy trình truyền tín hiệu lên drone PX4
+Quy trình truyền tín hiệu lên drone PX4
+Các bộ phận nhập liệu (joystick, switch, núm xoay) → Vi điều khiển tay cầm
+
+Vi điều khiển đọc các giá trị và trạng thái, đóng gói thành bản tin điều khiển (theo giao thức: SBUS, CRSF, PPM...).
+Vi điều khiển → Module RF → Ăng-ten phát sóng
+
+Bản tin điều khiển được mã hóa và phát qua sóng RF tới drone.
+Drone (receiver) → Giải mã tín hiệu → PX4 Flight Controller
+
+Bộ thu tín hiệu trên drone nhận, giải mã, chuyển tới PX4.
+PX4 xử lý lệnh
+
+PX4 nhận lệnh, điều khiển động cơ, gimbal, camera, chế độ bay...
+Telemetry (nếu có)
+
+PX4 gửi thông tin trạng thái, vị trí, pin... về tay cầm, hiển thị trên màn hình, cảnh báo cho người dùng.
+Ví dụ thực tế:
+
+Khi bạn gạt joystick lên, vi điều khiển tay cầm chuyển thành kênh throttle, mã hóa và phát sóng RF. Drone nhận, PX4 tăng tốc động cơ để drone bay lên.
+Khi bạn bật công tắc “Return to Home”, tay cầm gửi tín hiệu chế độ về PX4, PX4 tự động điều khiển drone bay về vị trí xuất phát.
