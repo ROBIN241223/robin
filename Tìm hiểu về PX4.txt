@@ -17,7 +17,7 @@ nó được cộng đồng phát triển trên nền tảng chip STM32H7
 |                Khung (Frame)                       |
 |  |-- Động cơ + Cánh quạt --|                       |
 |  |-- ESC (điều khiển động cơ)                      |
-|  |-- Pin (Battery)                                  |
+|  |-- Pin (Battery)                                 |
 |  |-- Flight Controller (PX4, Pixhawk...)           |
 |      |-- IMU (Gyro + Accel)                        |
 |      |-- Compass                                   |
@@ -63,3 +63,15 @@ Ví dụ thực tế:
 
 Khi bạn gạt joystick lên, vi điều khiển tay cầm chuyển thành kênh throttle, mã hóa và phát sóng RF. Drone nhận, PX4 tăng tốc động cơ để drone bay lên.
 Khi bạn bật công tắc “Return to Home”, tay cầm gửi tín hiệu chế độ về PX4, PX4 tự động điều khiển drone bay về vị trí xuất phát.
+
+- dải tần để điều khiển 
++ 900 MHz / 868 MHz
+Dành cho các hệ thống điều khiển tầm xa (long range) như Crossfire, ELRS, R9M...
+900 MHz thường dùng ở Mỹ; 868 MHz dùng ở châu Âu (theo quy định vùng).
+Khoảng cách truyền: Có thể lên tới hàng chục km, xuyên vật cản tốt hơn 2.4 GHz.
+- dải tần để truyền video live về
++ Truyền bằng tín hiệu analog (5.8 GHz)
+Camera FPV trên drone ghi hình và truyền qua bộ phát video (VTX) dùng dải tần 5.8 GHz.
+Tay điều khiển hoặc kính FPV, màn hình FPV có bộ thu video (VRX) cũng dùng dải tần 5.8 GHz để nhận tín hiệu trực tiếp.
+Ưu điểm: Độ trễ thấp, truyền xa, giá rẻ.
+Nhược điểm: Chất lượng hình ảnh không cao, dễ nhiễu.
