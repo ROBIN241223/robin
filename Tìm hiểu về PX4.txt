@@ -71,8 +71,9 @@ Dành cho các hệ thống điều khiển tầm xa (long range) như Crossfire
 Khoảng cách truyền: Có thể lên tới hàng chục km, xuyên vật cản tốt hơn 2.4 GHz.
 
 - dải tần để truyền video live về
-+ Truyền bằng tín hiệu radio (2.4 GHz)
-hạn chế của dải tần này là có độ trễ tín hiệu truyền sóng kém 
++ Truyền bằng tín hiệu radio (2.4 GHz) dải tần rộng phạm vi xa 
+hạn chế của dải tần này là có độ trễ tín hiệu truyền sóng kém không ổn định bằng 5.8 GHZ
 cho video chất lượng thấp tụt fps
-
+* cách khắc phục có thể thay bằng sóng 5.8ghz để tín hiệu được ổn định
+hạn chế của cách này là (đường truyền hẹp , phạm vi ngắn )
 
