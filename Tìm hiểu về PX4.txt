@@ -77,3 +77,20 @@ cho video chất lượng thấp tụt fps
 * cách khắc phục có thể thay bằng sóng 5.8ghz để tín hiệu được ổn định
 hạn chế của cách này là (đường truyền hẹp , phạm vi ngắn )
 
+- thuật toán điều khiển drone 
++ PID :
+2. PID được sử dụng ở đâu trong drone?
+Điều khiển attitude (góc nghiêng: roll, pitch, yaw).
+Giữ vị trí, độ cao (position, altitude).
+Điều khiển tốc độ động cơ.
+
+3. Nguyên lý hoạt động PID trong drone
+Drone nhận lệnh (ví dụ: nghiêng sang trái, bay lên, quay đầu).
+Cảm biến (IMU, gyro, accelerometer) đo trạng thái hiện tại (góc, vị trí, tốc độ).
+PID controller so sánh trạng thái hiện tại với trạng thái mong muốn (setpoint).
+Tính toán sai số (error = setpoint - actual value).
+Ba thành phần PID xử lý sai số:
+P (Proportional): Điều chỉnh nhanh theo sai số tức thời.
+I (Integral): Bù trừ sai số tích lũy (lâu dài).
+D (Derivative): Dự đoán và giảm rung lắc bằng cách xét tốc độ thay đổi sai số.
+Kết quả PID là tín hiệu điều chỉnh gửi đến động cơ (ESC), giúp drone đạt trạng thái mong muốn.
