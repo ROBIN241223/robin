@@ -3,7 +3,7 @@ Ground Control Station là gì ? (tay cầm)(https://docs.qgroundcontrol.com/mas
 - Đọc cả SIYI MK32
 Trên drone thường sẽ có những bộ phận nào
 Giao thức thường được sử dụng là gì? (MAVlink)(CAN ESC)(https://docs.px4.io/main/en/can/)
-Để điều khiển drone cần những thông tin về dữ kiện gì ? (Telemetry)(height,weight)(elrs)
+Để điều khiển drone cần những thông tin về dữ kiện gì ? (Telemetry)(height,weight)(elrs)(ARK Flow, VectorNav)
 Drone có những kiểu điều khiển như thế nào  (throttle, yaw, pitch, ..)
 Tìm hiểu xem Drone thường sử dụng những dải tần nào để điều khiển ?
 Lợi ích, tác hại của những dải tần?
@@ -69,7 +69,7 @@ Quy trình truyền tín hiệu lên drone PX4
 Các bộ phận nhập liệu (joystick, switch, núm xoay) → Vi điều khiển tay cầm
 
 Vi điều khiển đọc các giá trị và trạng thái, đóng gói thành bản tin điều khiển (theo giao thức: SBUS, CRSF, PPM...).
-Vi điều khiển → Module RF → Ăng-ten phát sóng
+Vi điều khiển → Module  → Ăng-ten phát sóng
 
 Bản tin điều khiển được mã hóa và phát qua sóng RF tới drone.
 Drone (receiver) → Giải mã tín hiệu → PX4 Flight Controller
