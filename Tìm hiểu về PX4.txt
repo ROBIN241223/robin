@@ -95,5 +95,11 @@ I (Integral): Bù trừ sai số tích lũy (lâu dài).
 D (Derivative): Dự đoán và giảm rung lắc bằng cách xét tốc độ thay đổi sai số.
 Kết quả PID là tín hiệu điều chỉnh gửi đến động cơ (ESC), giúp drone đạt trạng thái mong muốn.
 
++. Quaternion Attitude Control (Điều khiển tư thế bằng quaternion)
+Được mô tả trong phần mô tả file và tài liệu tham khảo:
+Nonlinear Quadrocopter Attitude Control (2013) by Dario Brescianini, Markus Hehn and Raffaello D'Andrea.
+Thuật toán này sử dụng quaternion để điều khiển tư thế (attitude) của drone, giúp tránh các vấn đề về singularity (góc Euler).
+Được triển khai trong hàm generate_attitude_setpoint và các hàm liên quan đến attitude control.
 
-cách drone hoạt động 
+các giao tiếp trong drone tới bo mạch :
+https://docs.px4.io/main/en/companion_computer/holybro_pixhawk_jetson_baseboard
