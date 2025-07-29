@@ -94,3 +94,6 @@ P (Proportional): Điều chỉnh nhanh theo sai số tức thời.
 I (Integral): Bù trừ sai số tích lũy (lâu dài).
 D (Derivative): Dự đoán và giảm rung lắc bằng cách xét tốc độ thay đổi sai số.
 Kết quả PID là tín hiệu điều chỉnh gửi đến động cơ (ESC), giúp drone đạt trạng thái mong muốn.
+
+
+cách drone hoạt động 
