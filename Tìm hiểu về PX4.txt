@@ -103,3 +103,26 @@ Thuật toán này sử dụng quaternion để điều khiển tư thế (attit
 
 các giao tiếp trong drone tới bo mạch :
 https://docs.px4.io/main/en/companion_computer/holybro_pixhawk_jetson_baseboard
+
+
+sơ đồ điều khiển PX4 từ PID đến động cơ :
++------------------+
+|  Rate Controller |   ← PID tính toán moment
+| (Roll, Pitch, Yaw) |
++------------------+
+          ↓
+     torque_sp (Nm)   ← moment mong muốn
+          ↓
++------------------+
+|      Mixer       |   ← ánh xạ torque thành lực động cơ
++------------------+
+          ↓
+   motor_output (PWM) ← giá trị từ 1000 - 2000 µs
+          ↓
++------------------+
+|      ESC         |   ← chuyển PWM thành dòng điện
++------------------+
+          ↓
++------------------+
+|    Động cơ       |   ← tạo lực quay + lực nâng
++------------------+
