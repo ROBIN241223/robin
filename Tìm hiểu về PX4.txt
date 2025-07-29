@@ -95,6 +95,25 @@ cho video chất lượng thấp tụt fps
 * cách khắc phục có thể thay bằng sóng 5.8ghz để tín hiệu được ổn định
 hạn chế của cách này là (đường truyền hẹp , phạm vi ngắn )
 
+-(truyền telemetry, truyền video), hãy nói rõ hơn để mình tư vấn chi tiết!
+Telemetry (viễn trắc) là quá trình thu thập và truyền dữ liệu từ một thiết bị ở xa (ví dụ: drone, vệ tinh, cảm biến...) về máy chủ hoặc thiết bị điều khiển trung tâm để giám sát, phân tích và điều khiển.
+
+Trong drone PX4, telemetry thường là các thông tin như:
+
+Vị trí, tốc độ, độ cao
+Tình trạng pin, GPS
+Trạng thái bay, lỗi hệ thống
+Dữ liệu cảm biến (IMU, khí áp, v.v.)
+Dữ liệu này được truyền về mặt đất qua sóng radio, WiFi, hoặc các giao thức như MAVLink để người dùng có thể theo dõi và điều khiển drone từ xa.
+Telemetry tương tự như một hệ thống giám sát từ xa hoặc truyền dữ liệu tự động.
+Bạn có thể hình dung nó giống như:
+
+Hộp đen máy bay: Ghi lại và truyền dữ liệu chuyến bay về trung tâm để phân tích.
+Đồng hồ thông minh: Gửi dữ liệu sức khỏe của bạn về điện thoại.
+Cảm biến thời tiết tự động: Gửi số liệu nhiệt độ, độ ẩm về trạm khí tượng.
+Tóm lại, telemetry là cách thiết bị tự động gửi dữ liệu về cho người dùng hoặc hệ thống giám sát mà không cần thao tác thủ công.
+
+
 - thuật toán điều khiển drone 
 + PID :
 2. PID được sử dụng ở đâu trong drone?
@@ -145,22 +164,4 @@ https://docs.px4.io/main/en/companion_computer/holybro_pixhawk_jetson_baseboard
 |    Động cơ       |   ← tạo lực quay + lực nâng
 +------------------+
 
-
--(truyền telemetry, truyền video), hãy nói rõ hơn để mình tư vấn chi tiết!
-Telemetry (viễn trắc) là quá trình thu thập và truyền dữ liệu từ một thiết bị ở xa (ví dụ: drone, vệ tinh, cảm biến...) về máy chủ hoặc thiết bị điều khiển trung tâm để giám sát, phân tích và điều khiển.
-
-Trong drone PX4, telemetry thường là các thông tin như:
-
-Vị trí, tốc độ, độ cao
-Tình trạng pin, GPS
-Trạng thái bay, lỗi hệ thống
-Dữ liệu cảm biến (IMU, khí áp, v.v.)
-Dữ liệu này được truyền về mặt đất qua sóng radio, WiFi, hoặc các giao thức như MAVLink để người dùng có thể theo dõi và điều khiển drone từ xa.
-Telemetry tương tự như một hệ thống giám sát từ xa hoặc truyền dữ liệu tự động.
-Bạn có thể hình dung nó giống như:
-
-Hộp đen máy bay: Ghi lại và truyền dữ liệu chuyến bay về trung tâm để phân tích.
-Đồng hồ thông minh: Gửi dữ liệu sức khỏe của bạn về điện thoại.
-Cảm biến thời tiết tự động: Gửi số liệu nhiệt độ, độ ẩm về trạm khí tượng.
-Tóm lại, telemetry là cách thiết bị tự động gửi dữ liệu về cho người dùng hoặc hệ thống giám sát mà không cần thao tác thủ công.
 
