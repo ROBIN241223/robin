@@ -2,7 +2,7 @@ Tìm hiểu về PX4
 Ground Control Station là gì ? (tay cầm)(https://docs.qgroundcontrol.com/master/en/qgc-user-guide/)
 - Đọc cả SIYI MK32
 Trên drone thường sẽ có những bộ phận nào
-Giao thức thường được sử dụng là gì? (MAVlink)
+Giao thức thường được sử dụng là gì? (MAVlink)(CAN ESC)(https://docs.px4.io/main/en/can/)
 Để điều khiển drone cần những thông tin về dữ kiện gì ? (Telemetry)
 Drone có những kiểu điều khiển như thế nào  (throttle, yaw, pitch, ..)
 Tìm hiểu xem Drone thường sử dụng những dải tần nào để điều khiển ?
