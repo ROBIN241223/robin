@@ -1,5 +1,5 @@
 Tìm hiểu về PX4
-Ground Control Station là gì ? (tay cầm)
+Ground Control Station là gì ? (tay cầm)(https://docs.qgroundcontrol.com/master/en/qgc-user-guide/)
 - Đọc cả SIYI MK32
 Trên drone thường sẽ có những bộ phận nào
 Giao thức thường được sử dụng là gì? (MAVlink)
