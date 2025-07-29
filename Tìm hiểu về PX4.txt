@@ -12,6 +12,20 @@ tài liệu tham khảo
 https://px4.io/software/software-overview/
 nó được cộng đồng phát triển trên nền tảng chip STM32H7
 
+-tại sao các nhà phát triển PX4:
+
++kiến trúc Mô Đun 
+PX4 có tính mô-đun hóa cao và khả năng mở rộng cả về phần cứng lẫn phần mềm. Nó sử dụng kiến trúc dựa trên cổng - nghĩa là khi các nhà phát triển thêm các thành phần, hệ thống mở rộng không bị mất đi tính mạnh mẽ hay hiệu suất.
+
++nguồn mở 
+PX4 được phát triển đồng thời với một cộng đồng phát triển toàn cầu. Flightstack không chỉ đáp ứng nhu cầu của một phòng thí nghiệm hay một công ty, mà còn được thiết kế như một bộ công cụ chung và được sử dụng rộng rãi trong ngành.
+
++khả năng cấu hình 
+PX4 cung cấp các API và SDK được tối ưu hóa cho các nhà phát triển làm việc với tích hợp. Tất cả các mô-đun đều độc lập và có thể dễ dàng chuyển đổi sang một mô-đun khác mà không cần sửa đổi lõi. Các tính năng dễ dàng triển khai và cấu hình lại.
+
++ngăn xếp tự động 
+PX4 được thiết kế để kết hợp chặt chẽ với thị giác máy tính nhúng nhằm mang lại khả năng tự động hóa. Nền tảng này giúp giảm thiểu rào cản gia nhập cho các nhà phát triển đang nghiên cứu các thuật toán định vị và phát hiện chướng ngại vật.
+
 - các bộ phận trên drone
 +----------------------------------------------------+
 |                Khung (Frame)                       |
