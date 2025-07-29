@@ -3,7 +3,7 @@ Ground Control Station là gì ? (tay cầm)(https://docs.qgroundcontrol.com/mas
 - Đọc cả SIYI MK32
 Trên drone thường sẽ có những bộ phận nào
 Giao thức thường được sử dụng là gì? (MAVlink)
-Để điều khiển drone cần những thông tin về dữ kiện gì ?
+Để điều khiển drone cần những thông tin về dữ kiện gì ? (Telemetry)
 Drone có những kiểu điều khiển như thế nào  (throttle, yaw, pitch, ..)
 Tìm hiểu xem Drone thường sử dụng những dải tần nào để điều khiển ?
 Lợi ích, tác hại của những dải tần?
@@ -101,11 +101,11 @@ Nonlinear Quadrocopter Attitude Control (2013) by Dario Brescianini, Markus Hehn
 Thuật toán này sử dụng quaternion để điều khiển tư thế (attitude) của drone, giúp tránh các vấn đề về singularity (góc Euler).
 Được triển khai trong hàm generate_attitude_setpoint và các hàm liên quan đến attitude control.
 
-các giao tiếp trong drone tới bo mạch :
+-các giao tiếp trong drone tới bo mạch :
 https://docs.px4.io/main/en/companion_computer/holybro_pixhawk_jetson_baseboard
 
 
-sơ đồ điều khiển PX4 từ PID đến động cơ :
+-sơ đồ điều khiển PX4 từ PID đến động cơ :
 +------------------+
 |  Rate Controller |   ← PID tính toán moment
 | (Roll, Pitch, Yaw) |
@@ -126,3 +126,22 @@ sơ đồ điều khiển PX4 từ PID đến động cơ :
 +------------------+
 |    Động cơ       |   ← tạo lực quay + lực nâng
 +------------------+
+
+
+-(truyền telemetry, truyền video), hãy nói rõ hơn để mình tư vấn chi tiết!
+Telemetry (viễn trắc) là quá trình thu thập và truyền dữ liệu từ một thiết bị ở xa (ví dụ: drone, vệ tinh, cảm biến...) về máy chủ hoặc thiết bị điều khiển trung tâm để giám sát, phân tích và điều khiển.
+
+Trong drone PX4, telemetry thường là các thông tin như:
+
+Vị trí, tốc độ, độ cao
+Tình trạng pin, GPS
+Trạng thái bay, lỗi hệ thống
+Dữ liệu cảm biến (IMU, khí áp, v.v.)
+Dữ liệu này được truyền về mặt đất qua sóng radio, WiFi, hoặc các giao thức như MAVLink để người dùng có thể theo dõi và điều khiển drone từ xa.
+Telemetry tương tự như một hệ thống giám sát từ xa hoặc truyền dữ liệu tự động.
+Bạn có thể hình dung nó giống như:
+
+Hộp đen máy bay: Ghi lại và truyền dữ liệu chuyến bay về trung tâm để phân tích.
+Đồng hồ thông minh: Gửi dữ liệu sức khỏe của bạn về điện thoại.
+Cảm biến thời tiết tự động: Gửi số liệu nhiệt độ, độ ẩm về trạm khí tượng.
+Tóm lại, telemetry là cách thiết bị tự động gửi dữ liệu về cho người dùng hoặc hệ thống giám sát mà không cần thao tác thủ công.
