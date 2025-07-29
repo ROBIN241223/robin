@@ -15,6 +15,7 @@ https://docs.holybro.com/autopilot/pixhawk-baseboards/pixhawk-jetson-baseboard/o
 https://docs.px4.io/main/en/concept/architecture
 https://docs.px4.io/main/en/concept/px4_systems_architecture.html
 https://docs.px4.io/main/en/flight_stack/controller_diagrams.html
+https://docs.px4.io/main/en/can/
 -PX4 Là gì :
 
 +PX4 là phần mềm điều khiển bay nguồn mở dành cho máy bay không người lái (drone) và các phương tiện không người lái khác. Dự án cung cấp một bộ công cụ linh hoạt cho phép các nhà phát triển drone chia sẻ công nghệ, từ đó tạo ra các giải pháp phù hợp cho các ứng dụng drone. PX4 cung cấp một tiêu chuẩn để cung cấp hỗ trợ phần cứng và phần mềm cho drone, cho phép một hệ sinh thái xây dựng và bảo trì phần cứng và phần mềm một cách linh hoạt.
