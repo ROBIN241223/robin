@@ -3,11 +3,11 @@ Ground Control Station là gì ? (tay cầm)(https://docs.qgroundcontrol.com/mas
 - Đọc cả SIYI MK32
 Trên drone thường sẽ có những bộ phận nào
 Giao thức thường được sử dụng là gì? (MAVlink)(CAN ESC)(https://docs.px4.io/main/en/can/)
-Để điều khiển drone cần những thông tin về dữ kiện gì ? (Telemetry)
+Để điều khiển drone cần những thông tin về dữ kiện gì ? (Telemetry)(height,weight)(elrs)
 Drone có những kiểu điều khiển như thế nào  (throttle, yaw, pitch, ..)
 Tìm hiểu xem Drone thường sử dụng những dải tần nào để điều khiển ?
 Lợi ích, tác hại của những dải tần?
-giao thức truyền video về ? (rtsp protocol)
+giao thức truyền video về ? (rtsp protocol)(telemetry 2.4GHZ ,RC)
 tài liệu tham khảo
 https://px4.io/software/software-overview/
 nó được cộng đồng phát triển trên nền tảng chip STM32H7
