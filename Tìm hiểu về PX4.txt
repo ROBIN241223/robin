@@ -145,3 +145,5 @@ Hộp đen máy bay: Ghi lại và truyền dữ liệu chuyến bay về trung 
 Đồng hồ thông minh: Gửi dữ liệu sức khỏe của bạn về điện thoại.
 Cảm biến thời tiết tự động: Gửi số liệu nhiệt độ, độ ẩm về trạm khí tượng.
 Tóm lại, telemetry là cách thiết bị tự động gửi dữ liệu về cho người dùng hoặc hệ thống giám sát mà không cần thao tác thủ công.
+
+
