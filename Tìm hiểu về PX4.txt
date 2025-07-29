@@ -12,6 +12,10 @@ tài liệu tham khảo
 https://px4.io/software/software-overview/
 nó được cộng đồng phát triển trên nền tảng chip STM32H7
 
+-PX4 Là gì :
+
++PX4 là phần mềm điều khiển bay nguồn mở dành cho máy bay không người lái (drone) và các phương tiện không người lái khác. Dự án cung cấp một bộ công cụ linh hoạt cho phép các nhà phát triển drone chia sẻ công nghệ, từ đó tạo ra các giải pháp phù hợp cho các ứng dụng drone. PX4 cung cấp một tiêu chuẩn để cung cấp hỗ trợ phần cứng và phần mềm cho drone, cho phép một hệ sinh thái xây dựng và bảo trì phần cứng và phần mềm một cách linh hoạt.
+
 -tại sao các nhà phát triển PX4:
 
 +kiến trúc Mô Đun 
@@ -159,5 +163,4 @@ Hộp đen máy bay: Ghi lại và truyền dữ liệu chuyến bay về trung 
 Đồng hồ thông minh: Gửi dữ liệu sức khỏe của bạn về điện thoại.
 Cảm biến thời tiết tự động: Gửi số liệu nhiệt độ, độ ẩm về trạm khí tượng.
 Tóm lại, telemetry là cách thiết bị tự động gửi dữ liệu về cho người dùng hoặc hệ thống giám sát mà không cần thao tác thủ công.
-
 
