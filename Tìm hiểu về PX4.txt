@@ -119,7 +119,7 @@ Cảm biến thời tiết tự động: Gửi số liệu nhiệt độ, độ 
 Tóm lại, telemetry là cách thiết bị tự động gửi dữ liệu về cho người dùng hoặc hệ thống giám sát mà không cần thao tác thủ công.
 
 
-- thuật toán điều khiển drone 
+- thuật toán điều khiển drone https://docs.px4.io/main/en/flight_stack/controller_diagrams.html
 + PID :
 2. PID được sử dụng ở đâu trong drone?
 Điều khiển attitude (góc nghiêng: roll, pitch, yaw).
