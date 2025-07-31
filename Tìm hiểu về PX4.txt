@@ -169,4 +169,24 @@ https://docs.px4.io/main/en/companion_computer/holybro_pixhawk_jetson_baseboard
 |    Động cơ       |   ← tạo lực quay + lực nâng
 +------------------+
 
+QGC
+Thanh công cụ : Thanh công cụ nằm ở đầu màn hình. Thanh công cụ này cung cấp các nút điều khiển để chọn chế độ xem, hiển thị trạng thái và chế độ bay cũng như trạng thái của các bộ phận chính của phương tiện.
+Hành động của xe : Cho phép bạn ra lệnh cho xe thực hiện một hành động cụ thể.
+Bảng điều khiển : Một tiện ích hiển thị dữ liệu đo từ xa của xe.
+Attitude/Compass : Một tiện ích cung cấp thông tin về đường chân trời và hướng đi ảo.
+Công cụ máy ảnh : Tiện ích để chuyển đổi giữa chế độ chụp ảnh tĩnh và quay video, bắt đầu/dừng chụp và kiểm soát cài đặt máy ảnh.
+Video : Hiển thị video từ xe. Cho phép bạn chuyển đổi giữa video hoặc bản đồ làm màn hình chính.
+Bản đồ: Hiển thị vị trí của tất cả các phương tiện được kết nối và nhiệm vụ của phương tiện hiện tại.
+Bạn có thể kéo bản đồ để di chuyển nó xung quanh (bản đồ sẽ tự động định vị lại xe sau một khoảng thời gian nhất định).
+Bạn có thể phóng to hoặc thu nhỏ bản đồ bằng các nút phóng to, bánh xe chuột, bàn di chuột hoặc chụm trên máy tính bảng.
+Khi bay, bạn có thể nhấp vào bản đồ để thiết lập Đi tới hoặc Bay theo quỹ đạo tại vị trí đó.
+
+Các hành động liên quan đến vị trí bản đồ (#map_actions)
+Có một số hành động có thể thực hiện liên quan đến một vị trí cụ thể trên bản đồ. Để sử dụng các hành động này:
+
+Nhấp vào bản đồ ở vị trí cụ thể
+Một cửa sổ bật lên sẽ hiển thị cho bạn danh sách các hành động có sẵn
+Chọn hành động bạn muốn
+Xác nhận hành động
+Ví dụ về các hành động định vị bản đồ là Đi tới vị trí, Quỹ đạo, v.v.
 
