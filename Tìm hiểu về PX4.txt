@@ -190,3 +190,37 @@ Chọn hành động bạn muốn
 Xác nhận hành động
 Ví dụ về các hành động định vị bản đồ là Đi tới vị trí, Quỹ đạo, v.v.
 
+Ví dụ:
+Interface	Mô tả
+UART (Universal Asynchronous Receiver/Transmitter)	Giao tiếp nối tiếp, thường dùng giữa vi điều khiển và cảm biến/module
+I2C (Inter-Integrated Circuit)	Giao tiếp nối tiếp hai dây (SDA, SCL)
+SPI (Serial Peripheral Interface)	Giao tiếp nối tiếp bốn dây (MOSI, MISO, SCLK, SS)
+USB	Giao diện phổ biến giữa máy tính và thiết bị ngoại vi
+GPIO	Giao diện đầu vào/ra số đơn giản
+
+→ Interface quy định phần cứng kết nối, số dây, cách đấu nối, và đặc tính điện học (mức điện áp, tốc độ, v.v.).
+
+📡 2. Protocol (Giao thức) là gì?
+Protocol là tập hợp các quy tắc và định dạng dữ liệu để các thiết bị trao đổi thông tin với nhau thông qua một interface.
+
+Nó mô tả:
+
+Cách bắt đầu/kết thúc giao tiếp
+
+Cách định dạng dữ liệu
+
+Cách kiểm tra lỗi
+
+Cách đồng bộ hóa
+
+Ví dụ:
+Protocol	Mô tả
+I2C protocol	Gồm start bit, address, R/W bit, ACK/NACK, stop bit
+SPI protocol	Định nghĩa thứ tự gửi bit (MSB/LSB), thời điểm chốt dữ liệu
+Modbus	Giao thức công nghiệp hoạt động qua RS-485 hoặc TCP/IP
+CAN protocol	Giao thức cho hệ thống nhúng ô tô, truyền qua bus CAN
+USB protocol	Phức tạp, hỗ trợ lớp device class (audio, mass storage, HID...)
+
+→ Protocol nằm ở tầng logic hoặc phần mềm, điều khiển cách thiết bị hiểu và xử lý dữ liệu.
+đây là 2 khái niệm quan trọng trong hệ thống phần cứng
+em cần nắm rõ và hiểu sâu
