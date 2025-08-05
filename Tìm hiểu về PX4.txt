@@ -255,3 +255,13 @@ nếu slave vâng lời thì SDA sẽ về LOW khi đối chiếu với SCL
 còn slave không vâng lời thì SDA sẽ về HIGH khi đối chiếu với SCL khi mà cả 2 tín hiệu này đều gửi về
 ACK và NACK là bit thứ 9 được nhét sau cùng bit thứ 8 khi gửi 1 byte dữ liệu
 nếu không có ACK or NACK gửi về có thể coi là coi là SLAVE bị điếc ( trục trặc kết nối )  hoặc không có SLAVE để nghe lệnh , hoặc SLAVE chưa sẵn sàng có nhiều nguyên nhân chưa sẵn sàng có thể do mạch điện đang không ổn định , quá nhiệt , quá tải , trục trặc về linh kiện gắn trên SLAVE 
+
+SCL và SDA 
+SCL được coi như là một vị tướng được master tạo ra với mục đích sắp xếp vị trí từng bit 1 cho nó đi đúng lộ trình và thời điểm byte này được truyền đi 
+SDA là nơi được coi như là đường truyền dữ liệu bao gồm dữ liệu từ thanh ghi và đọc của Master khi kết nối với SLAVE cho phép master ra chỉ thị cho slave và slave phản hồi lại master về quá trình công việc giống như việc bạn phản hồi lại sếp của bạn khi bạn nhận được nhiệm vụ là như thế nào ở đây thì SDA cho phép Master và slave được tự do ngôn luận
+
+stop bit : 
+được khởi động sau khi start bit và là tín hiệu cuối cùng 
+để kết thúc 1 byte dữ liệu 
+tương tự như start bit thì stop bit có phần ngược lại so với start là nó sẽ nhảy 1 bit từ LOW lên HIGH khi SCL đang HIGH
+
