@@ -210,3 +210,36 @@ MAVlink là một giao thức sử dụng Telemetry radio để gửi tín hiệ
 telemetry radio gửi tín hiệu lên máy bay bằng cách đồng bộ giải tần muốn gửi lên máy bay nào thì dải tần phải giống với máy bay đó
 
 
+
+I2C :
+Start condition :
+Là tín hiệu bắt đầu giao tiếp I2C
+Do thiết bị master phát ra 
+Không phải là 1 bit dữ liệu mà là tín hiệu điều khiển đặc biệt
+Cách tạo tín hiệu Start :
+Start condition xảy ra khi :
+SDA chuyển từ HIGH -> LOW trong khi SCL đang HIGH 
+vai trò của start bit :
+Đồng bộ - Báo hiệu cho tất cả thiết bị trên bus rằng một dữ liệu truyền mới bắt đầu
+Xác định master - Master là một thiết bị phát Start
+Bắt đầu truyền - Ngay sau Start, master sẽ gửi địa chỉ + R/W
+
+Địa chỉ 7-bit tùy vào module hỗ trợ từ bao nhiêu đến bao nhiêu 
+ví dụ LM75 hỗ trợ từ 0x48 đến 0x4F với các chân từ 1001A2A1A0 tùy bên phía nhà sản xuất thì có thể là (AX) có thể là không hoặc 1 để xác định địa chỉ 
+A2	A1	A0	Địa chỉ nhị phân	Địa chỉ HEX
+0	0	0	1001000	             0x48
+0	0	1	1001001	             0x49
+0	1	0	1001010	             0x4A
+0	1	1	1001011	             0x4B
+1	0	0	1001100	             0x4C
+1	0	1	1001101	             0x4D
+1	1	0	1001110	             0x4E
+1	1	1	1001111	             0x4F
+
+R/W (read/write) trong giao thức I2C là 1 bit rất quan trọng . Nó nằm ngay sau byte địa chỉ và cho phép vi điều khiển (MCU) cho biết là nó muốn đọc dữ liệu từ thiết bị hay ghi dữ liệu vào thiết bị 
+[7-bit địa chỉ thiết bị ] + [ 1-bit R/W]
+0 -> ghi dữ liệu vào thiết bị (Write)
+1 -> Đọc dữ liệu từ thiết bị (Read)
+Wire.beginTransmission(LM75_ADDRESS); // Start condition + gửi địa chỉ + R/W = 0
+
+Wire.requestFrom(LM75_ADDRESS, 2);   // Start condition + địa chỉ + R/W = 1
