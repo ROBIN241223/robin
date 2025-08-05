@@ -225,7 +225,7 @@ Xác định master - Master là một thiết bị phát Start
 Bắt đầu truyền - Ngay sau Start, master sẽ gửi địa chỉ + R/W
 
 Địa chỉ 7-bit tùy vào module hỗ trợ từ bao nhiêu đến bao nhiêu 
-ví dụ LM75 hỗ trợ từ 0x48 đến 0x4F với các chân từ 1001A2A1A0 tùy bên phía nhà sản xuất thì có thể là (AX) có thể là không hoặc 1 để xác định địa chỉ 
+ví dụ LM75 hỗ trợ từ 0x48 đến 0x4F với các chân từ 1001A2A1A0 tùy bên phía nhà sản xuất thì có thể là (AX) có thể là 0 hoặc 1 để xác định địa chỉ 
 A2	A1	A0	Địa chỉ nhị phân	Địa chỉ HEX
 0	0	0	1001000	             0x48
 0	0	1	1001001	             0x49
@@ -236,10 +236,22 @@ A2	A1	A0	Địa chỉ nhị phân	Địa chỉ HEX
 1	1	0	1001110	             0x4E
 1	1	1	1001111	             0x4F
 
-R/W (read/write) trong giao thức I2C là 1 bit rất quan trọng . Nó nằm ngay sau byte địa chỉ và cho phép vi điều khiển (MCU) cho biết là nó muốn đọc dữ liệu từ thiết bị hay ghi dữ liệu vào thiết bị 
+R/W:
+(read/write) trong giao thức I2C là 1 bit rất quan trọng . Nó nằm ngay sau byte địa chỉ và cho phép vi điều khiển (MCU) cho biết là nó muốn đọc dữ liệu từ thiết bị hay ghi dữ liệu vào thiết bị 
 [7-bit địa chỉ thiết bị ] + [ 1-bit R/W]
 0 -> ghi dữ liệu vào thiết bị (Write)
 1 -> Đọc dữ liệu từ thiết bị (Read)
 Wire.beginTransmission(LM75_ADDRESS); // Start condition + gửi địa chỉ + R/W = 0
 
 Wire.requestFrom(LM75_ADDRESS, 2);   // Start condition + địa chỉ + R/W = 1
+
+ACK: là tín hiệu phản hồi 
+sau khi nhận đúng địa chỉ báo ACK ((thiết bị nhận dữ liệu thành công)Acknowledge)
+SDA khi nào bằng LOW thì là tín hiệu báo ACK (đã nhận thành công) và muốn nhận thêm
+tín hiệu phản hồi ACK tới từ SLAVE 
+giống như việc master ra lệnh làm việc đi và slave có nhiệm vụ gửi ACK ( đã rõ thưa ngài )
+còn nếu không nghe lời hoặc đã làm đủ rồi thì slave có nhiệm vụ gửi NACK ( tôi đã làm rồi và không làm nữa or tôi không làm nữa thưa ngài )
+nếu slave vâng lời thì SDA sẽ về LOW khi đối chiếu với SCL
+còn slave không vâng lời thì SDA sẽ về HIGH khi đối chiếu với SCL khi mà cả 2 tín hiệu này đều gửi về
+ACK và NACK là bit thứ 9 được nhét sau cùng bit thứ 8 khi gửi 1 byte dữ liệu
+nếu không có ACK or NACK gửi về có thể coi là coi là SLAVE bị điếc ( trục trặc kết nối )  hoặc không có SLAVE để nghe lệnh , hoặc SLAVE chưa sẵn sàng có nhiều nguyên nhân chưa sẵn sàng có thể do mạch điện đang không ổn định , quá nhiệt , quá tải , trục trặc về linh kiện gắn trên SLAVE 
