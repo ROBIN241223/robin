@@ -205,3 +205,8 @@ USB protocol	Phức tạp, hỗ trợ lớp device class (audio, mass storage, H
 đây là 2 khái niệm quan trọng trong hệ thống phần cứng
 em cần nắm rõ và hiểu sâu
 
+
+MAVlink là một giao thức sử dụng Telemetry radio để gửi tín hiệu lên máy bay bằng cách tạo 1 vỏ bọc bên ngoài rồi bọc lấy tín hiệu cần phải gửi và tín hiệu này sẽ được mavlink gói lại sau đó gửi lên máy bay 
+telemetry radio gửi tín hiệu lên máy bay bằng cách đồng bộ giải tần muốn gửi lên máy bay nào thì dải tần phải giống với máy bay đó
+
+
