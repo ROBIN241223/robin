@@ -218,7 +218,7 @@ Do thiết bị master phát ra
 Không phải là 1 bit dữ liệu mà là tín hiệu điều khiển đặc biệt
 Cách tạo tín hiệu Start :
 Start condition xảy ra khi :
-SDA chuyển từ HIGH -> LOW trong khi SCL đang HIGH 
+SDA chuyển từ HIGH -> LOW trong khi SCL đang HIGH [giống với kiểu master bảo slave chuẩn bị nghe nó nói và slave nếu đã sẵn sàng nghe master nói thì truyền lại ACK ( vâng)]
 vai trò của start bit :
 Đồng bộ - Báo hiệu cho tất cả thiết bị trên bus rằng một dữ liệu truyền mới bắt đầu
 Xác định master - Master là một thiết bị phát Start
@@ -264,4 +264,5 @@ stop bit :
 được khởi động sau khi start bit và là tín hiệu cuối cùng 
 để kết thúc 1 byte dữ liệu 
 tương tự như start bit thì stop bit có phần ngược lại so với start là nó sẽ nhảy 1 bit từ LOW lên HIGH khi SCL đang HIGH
+
 
