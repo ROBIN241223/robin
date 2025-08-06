@@ -268,10 +268,20 @@ tương tự như start bit thì stop bit có phần ngược lại so với sta
 SPI :
 sơ lược :
 SPI có các chân MOSI ( master out slave in ) MISO ( master in slave out )
-sclk chân xung clock nó giống như cách start khi mà cô giáo gõ lên bảng thì học sinh bên dưới đọc hoặc phát biểu nghĩa là mỗi lần chân phát xung đó phát xung thì slave mới được làm 
+sclk chân xung clock nó giống như cách start khi mà cô giáo gõ lên bảng thì học sinh bên dưới đọc hoặc phát biểu nghĩa là mỗi lần chân phát xung đó phát xung thì slave mới được làm nó cũng như nhịp đập của tim khi có nhịp đập thì giao thức mới làm việc 
 ss chân truyền data sẽ có lần lượt ss1 ss2 ss3 ... ssn 
 ss nhằm có mục đích đó là cho data truyền đi đúng slave cần truyền nhiệm vụ tránh cho việc điều khiển bị rối
 spi có một nhược điểm số lượng dây kết nối rất nhiều và hiệu quả nhất là khi các slave ở gần 
 
+CAN :
+hiểu đơn giản nó sẽ có 2 đường truyền CAN RX và TX 
+RX thì thành LOW còn TX thì thành thành HIGH 
+nếu ở mức logic 0 thì 
+Can H sẽ nhảy lên 3.5V 
+Can L sẽ xuống 0V
+còn nếu ở mức logic 1
+Can L ,H lên xuống còn 2.5V không có sự chênh lệch điện áp thì ở trạng thái không truyền dữ liệu
+CAN to ECU :
+được hiểu như là dữ liệu từ CAN truyền qua ECU thì sẽ nhận dạng ECU đó thông qua ID 
 
 
