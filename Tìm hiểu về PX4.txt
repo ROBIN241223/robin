@@ -265,4 +265,13 @@ stop bit :
 để kết thúc 1 byte dữ liệu 
 tương tự như start bit thì stop bit có phần ngược lại so với start là nó sẽ nhảy 1 bit từ LOW lên HIGH khi SCL đang HIGH
 
+SPI :
+sơ lược :
+SPI có các chân MOSI ( master out slave in ) MISO ( master in slave out )
+sclk chân xung clock nó giống như cách start khi mà cô giáo gõ lên bảng thì học sinh bên dưới đọc hoặc phát biểu nghĩa là mỗi lần chân phát xung đó phát xung thì slave mới được làm 
+ss chân truyền data sẽ có lần lượt ss1 ss2 ss3 ... ssn 
+ss nhằm có mục đích đó là cho data truyền đi đúng slave cần truyền nhiệm vụ tránh cho việc điều khiển bị rối
+spi có một nhược điểm số lượng dây kết nối rất nhiều và hiệu quả nhất là khi các slave ở gần 
+
+
 
