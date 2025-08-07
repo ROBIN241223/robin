@@ -275,17 +275,17 @@ spi có một nhược điểm số lượng dây kết nối rất nhiều và 
 
 Các thành phần chính của SPI
 Master: Thiết bị điều khiển quá trình giao tiếp.
-
 Slave: Thiết bị nhận lệnh và gửi dữ liệu khi được master yêu cầu.
 SCK (Serial Clock): Đường xung clock do master tạo ra để đồng bộ hóa việc truyền dữ liệu.
 MOSI (Master Out Slave In): Đường dữ liệu từ master đến slave.
 MISO (Master In Slave Out): Đường dữ liệu từ slave về master.
 SS/CS (Slave Select/Chip Select): Đường tín hiệu do master điều khiển để chọn slave nào sẽ giao tiếp.
-
 Quá trình gửi một byte dữ liệu trong SPI
+
 Chọn Slave:
 Để bắt đầu giao tiếp với một slave cụ thể, master sẽ kéo đường SS/CS tương ứng của slave đó xuống mức thấp (logic 0).
 Các slave khác trên bus không được chọn sẽ giữ đường SS/CS của chúng ở mức cao và không tham gia vào quá trình truyền dữ liệu.
+
 Đồng bộ hóa và gửi dữ liệu:
 Master bắt đầu tạo ra các xung clock trên đường SCK.
 Trong mỗi chu kỳ xung clock, master sẽ đẩy một bit dữ liệu ra đường MOSI và đồng thời đọc một bit dữ liệu từ đường MISO. Cùng lúc đó, slave sẽ đọc bit từ MOSI và đẩy một bit dữ liệu của nó ra MISO.
@@ -313,6 +313,7 @@ còn nếu ở mức logic 1
 Can L ,H lên xuống còn 2.5V không có sự chênh lệch điện áp thì ở trạng thái không truyền dữ liệu
 CAN to ECU :
 được hiểu như là dữ liệu từ CAN truyền qua ECU thì sẽ nhận dạng ECU đó thông qua ID 
+
 
 
 
