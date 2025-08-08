@@ -315,5 +315,26 @@ CAN to ECU :
 được hiểu như là dữ liệu từ CAN truyền qua ECU thì sẽ nhận dạng ECU đó thông qua ID 
 
 
+Dưới đây là một số cách mà PX4 xử lý lỗi giao thức:
+
+Cơ chế xử lý lỗi theo từng giao thức
+DroneCAN: Giao thức này cực kỳ mạnh mẽ. Nó sử dụng các gói tin có checksum (mã kiểm tra lỗi) để đảm bảo dữ liệu không bị hỏng trong quá trình truyền. Nếu một gói tin bị lỗi, nó sẽ bị loại bỏ. Ngoài ra, giao thức CAN Bus còn có khả năng tự động ngắt kết nối các thiết bị bị lỗi trên bus để tránh làm ảnh hưởng đến toàn bộ mạng.
+
+I2C và SPI: Các giao thức này có cơ chế kiểm soát lỗi đơn giản hơn. I2C có bit ACK (Acknowledge) để xác nhận việc nhận dữ liệu, nhưng không có tính năng chống nhiễu mạnh mẽ như CAN Bus. Nếu có lỗi, PX4 sẽ cố gắng đọc lại dữ liệu hoặc báo lỗi cảm biến.
+
+UART: Đây là giao thức cơ bản nhất, thường không có cơ chế sửa lỗi tích hợp. Nếu dữ liệu bị hỏng, PX4 sẽ nhận được dữ liệu sai và có thể dẫn đến hành vi không mong muốn.
+
+Cơ chế an toàn tổng thể (Failsafe) của PX4
+Đây là cơ chế quan trọng nhất để gỡ lỗi và phục hồi hệ thống, không chỉ giới hạn ở giao thức. Nếu một giao thức gặp lỗi nghiêm trọng (ví dụ: mất kết nối với GPS hoặc bộ thu sóng), PX4 sẽ tự động kích hoạt các hành động an toàn (failsafe) đã được người dùng cài đặt trước, bao gồm:
+
+Chế độ giữ vị trí (Hold): Drone sẽ giữ nguyên vị trí hiện tại.
+
+Quay về điểm xuất phát (Return): Drone sẽ tự động quay trở lại điểm cất cánh.
+
+Hạ cánh khẩn cấp (Land): Drone sẽ hạ cánh tại vị trí hiện tại.
+
+Những cơ chế này giúp hệ thống tự động gỡ lỗi một cách an toàn và phục hồi sau khi gặp sự cố, đảm bảo drone không gặp tai nạn do lỗi giao tiếp.
+
+
 
 
