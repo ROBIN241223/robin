@@ -1,3 +1,4 @@
+https://chatgpt.com/share/68a4637e-1e7c-800a-8434-29e77acad64a
 Tìm hiểu về PX4
 Ground Control Station là gì ? (tay cầm)(https://docs.qgroundcontrol.com/master/en/qgc-user-guide/)
 - Đọc cả SIYI MK32
@@ -334,6 +335,7 @@ Quay về điểm xuất phát (Return): Drone sẽ tự động quay trở lạ
 Hạ cánh khẩn cấp (Land): Drone sẽ hạ cánh tại vị trí hiện tại.
 
 Những cơ chế này giúp hệ thống tự động gỡ lỗi một cách an toàn và phục hồi sau khi gặp sự cố, đảm bảo drone không gặp tai nạn do lỗi giao tiếp.
+
 
 
 
